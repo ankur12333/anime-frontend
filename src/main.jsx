@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     async function fetchAnime() {
       try {
-        const res = await fetch('http://localhost:3001/api/anime');
+        const res = await fetch('https://anime-backend-nmlv.onrender.com/api/anime');
         if (!res.ok) throw new Error('Failed to fetch anime list');
         const data = await res.json();
         setAnimeList(data);
